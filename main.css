@@ -11,24 +11,119 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 10px;
 
+img{
+    width: 250px;
+}
 li{
     display: inline-block;
     margin: 20px;
 }
 
-div{
+/*seção DESTAQUE*/
+
+}
+
+.destaque{
+    margin-top: 60px;
+}
+.destaque h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.destaque p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.destaque a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*MAIN*/
 
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
+/*Sobre*/
+.sobre{
+    color: #ff6b35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.conteudosobre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+    margin: 15px;
+}
+.conteudosobre img{
+    width: 250px;
+}
+
+/*PROJETOS*/
+.projetos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*ENIAC*/
+.eniac {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+    margin: 15px;
+}
+
+.eniac img{
+    width: 250px;
+}
+
+/*REENGENHARIA*/
+.reengenharia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 15px;
+}
+.reengenharia img{
+    width: 250px;
+}
+
+/*UNIC*/
+.unic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 15px;
+}
+.unic img{
+    width: 250px;
+}
