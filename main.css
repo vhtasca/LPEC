@@ -175,6 +175,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 15px;
 }
 .barra img{
     width: 100px;
