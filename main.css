@@ -127,3 +127,61 @@ main{
 .unic img{
     width: 250px;
 }
+
+/*PROFESSORES*/
+.professores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 15px;
+}
+.prof{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.cardprof{
+    width: 220px;
+    text-align: center;
+}
+.cardprof img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*FINAL*/
+.final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.barra{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.barra img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.barra p{
+    color: black;
+    margin: 0 auto 10px;
+}
