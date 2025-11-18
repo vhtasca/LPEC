@@ -5,6 +5,10 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 header{
@@ -22,6 +26,8 @@ li{
     display: inline-block;
     margin: 20px;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 .hero{
     color: #ff6b35;
@@ -52,11 +58,14 @@ li{
 }
 
 .destaque a{
+    color: white;
+    background-color: #ff6b35;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    text-decoration: none;
 }
 
 /*MAIN*/
@@ -132,7 +141,7 @@ main{
     margin: 15px;
 }
 .unic img{
-    width: 250px;
+    width: 300px;
 }
 
 /*PROFESSORES*/
@@ -188,6 +197,11 @@ main{
     width: 100px;
     height: 100px;
     margin: 10px;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .barra p{
     color: black;
