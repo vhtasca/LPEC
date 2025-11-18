@@ -14,12 +14,19 @@ header{
     margin-top: 10px;
 
 img{
-    width: 250px;
+    width: 80px;
 }
+
+
 li{
     display: inline-block;
     margin: 20px;
+    color: white;
 }
+.hero{
+    color: #ff6b35;
+}
+
 
 /*seção DESTAQUE*/
 
