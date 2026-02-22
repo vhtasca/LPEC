@@ -43,6 +43,7 @@ li{
     color: white;
     align-items: center;
 }
+
 .hero{
     color: #ff6b35;
 }
@@ -258,38 +259,65 @@ main{
     margin-right: auto;
     margin: 15px;
 }
-.prof{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px;
-}
-.cardprof{
-    width: 220px;
-    text-align: center;
-    background-color: white;
-    color: black;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 300;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-.cardprof h3{
+.professores {
+    background: #1B4965;
     color: #ff6b35;
-    font-weight: 500;
+    padding: 50px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
-.cardprof img{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 15px;
+
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.track-container {
+    overflow: hidden;
+    width: 80%;
+}
+
+.track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.card {
+    min-width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card p {
+    color: black;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.prev, .next {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.prev:hover, .next:hover {
+    transform: scale(1.2);
 }
 
 /*FINAL*/
@@ -350,3 +378,4 @@ ul{
     margin: 0 auto 10px;
     font-weight: 400;
 }
+

@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
+    <script src="carrossel.js" defer></script>
     <title>UNIFEV</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
 </head>
 <body>
+    <!--<div class="background">
+        <img src="./components/image/background.png" alt="background">
+    </div>-->
     <header>
        <article>
             <img src="./components/image/logoCOMP.png" alt="logocurso">
@@ -134,27 +138,96 @@
         </section>
 
         <!--PROFESSORES-->
-        <section id="professores">
-            <div>
-                <h2>Professores</h2>
+        <section class="professores">
+        <h2>Professores</h2>
+
+        <div class="carousel">
+        <button class="prev">&#10094;</button>
+
+        <div class="track-container">
+            <div class="track">
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 1">
+                    <h3>Fernando Bermejo Menechelli</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 2">
+                    <h3>Camilo Augusto Giamatei Esteluti</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Claudomiro Viniciús Moreno Paschoa</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Edson Roberto Bogas Garcia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Eduardo De Souza</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Eric De Oliveira Freitas</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Fernando Datorre</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Fernando Kendy Aoki Rizzatto</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>João Victor Marques Zoccal</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Marcos Paulo Segantini Dos Santos</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Milena Aparecida Batelo Ramos</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Patricia Salles Maturana De Souza</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Renato Ferrari Da Costa</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Rodrigo Salles Maturana</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Tainá Fernanda Garbelim Pascoalato</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
             </div>
-            <section class="prof">
-                <div class="cardprof">
-                    <img src="./components/image/Nada.png" alt="prof1">
-                    <h3>Professor 1</h3>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </div>
-                <div class="cardprof">
-                    <img src="./components/image/Nada.png" alt="prof1">
-                    <h3>Professor 2</h3>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </div>
-                <div class="cardprof">
-                    <img src="./components/image/Nada.png" alt="prof1">
-                    <h3>Professor 3</h3>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </div>
-            </section>
+        </div>
+
+        <button class="next">&#10095;</button>
+        </div>
         </section>
     <main>
     
