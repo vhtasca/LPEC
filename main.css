@@ -1,16 +1,25 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+
+/* Comportamento de scroll suave ao clicar nos links de navegação */
 html{
     scroll-behavior: smooth;
 }
 
+/* 
+ * Estilos globais do corpo da página
+ * Define cor de fundo, cor do texto, largura máxima e fonte principal
+ */
 body{
-    background-color: #1B4965;
+    background-color: #1B4965; /* Cor de fundo principal (azul escuro) */
     color: white;
     
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px;          /* Limita a largura máxima do conteúdo */
+    margin: 0 auto;            /* Centraliza o conteúdo horizontalmente */
     padding: 10px;
 
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; /* Fonte principal do projeto */
     font-weight: normal;
     font-style: normal;
 }
@@ -49,13 +58,17 @@ li{
 }
 
 
-/*seção DESTAQUE*/
+/* ==========================================================================
+   SEÇÃO DESTAQUE (Hero Section)
+   ========================================================================== */
 
-
+/* Centraliza o conteúdo da seção destaque */
 .destaque{
     margin-top: 60px;
     text-align: center;
 }
+
+/* Título principal da seção destaque */
 .destaque h1{
     display: flex;
     flex-direction: column;
@@ -65,11 +78,13 @@ li{
     font-size: 1rem;
 }
 
+/* Tamanho grande para impacto visual */
 .destaque h1{
     font-size: 3rem;
     font-weight: 700;
 }
 
+/* Subtítulo/mensagem da seção destaque */
 .destaque p{
     display: flex;
     flex-direction: column;
@@ -78,9 +93,10 @@ li{
     margin-right: auto;
 }
 
+/* Botão de chamada para ação (CTA) */
 .destaque a{
     color: white;
-    background-color: #ff6b35;
+    background-color: #ff6b35;  /* Cor de destaque (laranja) */
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -92,33 +108,42 @@ li{
     margin: 20px;
 }
 
-/*MAIN*/
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (MAIN)
+   ========================================================================== */
 
+/* Layout vertical para o main */
 main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/*Sobre*/
+/* ==========================================================================
+   SEÇÃO "SOBRE O CURSO"
+   ========================================================================== */
+
+/* 
+ * Container principal da seção Sobre
+ * Fundo branco com bordas arredondadas, centralizado na página
+ */
 .about{
     background-color: white;
     border-radius: 20px;
-    padding: 30px;
+    padding: 60px 30px;
     max-width: 1000px;
     margin: 40px auto;
-    color: black
-
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #sobre{
     color: #ff6b35;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 2rem;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 .videosobre{
     display: flex;
@@ -126,6 +151,10 @@ main{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: left;
+}
+.videosobre article {
+    text-align: center;
 }
 .videosobre article iframe {
     width: 474px;
@@ -162,33 +191,69 @@ main{
     margin-right: auto;
 }
 
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 /*ENIAC*/
 .eniac {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: auto;
+    margin-left: auto;
     margin: 15px;
+    max-width: 1200px;
+    gap: 15px;
 }
 .eniac aside{
-    margin-left: 150px;
+    margin-left: 10px;
     margin-right: 18px;
+    flex: 1; /* Permite que o aside ocupe o espaço restante */
+    max-width: 500px;
+}
+.eniac aside p:first-child{
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.eniac aside h2{
+    font-size: 2rem;
+    margin: 10px 0;
+    margin-top: 10px;
+}
+.eniac aside p:last-child{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 .eniac article{
-    margin-right: 150px;
+    margin-right: 10px;
     margin-left: 18px;
+    display: flex;
+    align-items: center;
 }
 
 .eniac img{
     width: 250px;
+    display: block; /* Garante que a imagem seja tratada como um bloco para evitar problemas de alinhamento */
 }
-.eniac ul{
+
+.eniacli {
     display: flex;
     flex-direction: column;
-    margin: 0px;
-}
-.eniac li{
-    margin: 10px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
 }
 
 /*REENGENHARIA*/
@@ -199,25 +264,57 @@ main{
     margin-left: auto;
     margin-right: auto;
     margin: 15px;
+    gap: 15px;
 }
-.reengenharia article{
-    margin-left: 150px;
-    margin-right: 18px;
-}
+
 .reengenharia aside{
-    margin-right: 150px;
-    margin-left: 18px;
+    margin-left: 10px;
+    margin-right: 18px;
+    flex: 1;
+    max-width: 500px;
 }
+
+.reengenharia aside p:first-child{
+    color: #4eb597;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.reengenharia aside h2{
+    font-size: 2rem;
+    margin: 10px 0;
+    margin-top: 10px;
+}
+
+.reengenharia aside p:last-child{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.reengenharia article{
+    margin-right: 10px;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
 .reengenharia img{
     width: 250px;
+    display: block;
 }
-.reengenharia ul{
+
+.reengenharia li{
     display: flex;
     flex-direction: column;
-    margin: 0px;
-}
-.reengenharia li{
-    margin: 10px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 30px;
+    text-align: center;
 }
 
 /*UNIC*/
@@ -228,17 +325,42 @@ main{
     margin-left: auto;
     margin-right: auto;
     margin: 15px;
+    max-width: 1200px;
+    gap: 15px;
 }
 .unic aside{
-    margin-left: 150px;
+    margin-left: 10px;
     margin-right: 18px;
+    flex: 1;
+    max-width: 500px;
+}
+.unic aside p:first-child{
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.unic aside h2{
+    font-size: 2rem;
+    margin: 10px 0;
+    margin-top: 10px;
+}
+.unic aside p:last-child{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 .unic article{
-    margin-right: 150px;
+    margin-right: 10px;
     margin-left: 18px;
+    display: flex;
+    align-items: center;
 }
 .unic img{
-    width: 300px;
+    width: 250px;
+    display: block;
 }
 
 .unic ul{
