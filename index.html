@@ -2,96 +2,251 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="carrossel.js" defer></script>
     <title>UNIFEV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 <body>
+    <!--<div class="background">
+        <img src="./components/image/background.png" alt="background">
+    </div>-->
     <header>
        <article>
-            <img src="./components/image/Nada.png" alt="logocurso">
+            <img src="./components/image/logoCOMP.png" alt="logocurso">
         </article>
 
         <aside>
             <ul>
-                <a href="#"><li>Sobre o curso</li></a>
-                <a href="#"><li>Projetos</li></a>
-                <a href="#"><li>Depoimentos</li></a>
+                <a href="#sobre"><li class="hero">Sobre o curso</li></a>
+                <a href="#projetos"><li>Projetos</li></a>
+                <a href="#professores"><li>Professores</li></a>
             </ul>
         </aside>
     
     </header>
-    <header>
+    
+    <!--Destaque-->
+
+    <section class="destaque">
         <div>
-            <h1>Descubra a Engenharia de Computação Unifev</h1>
+            <h1>Descubra a Engenharia de<br>Computação Unifev</h1>
             <p id="msg">Aprenda. Inove. Construa.</p>
-            <a href="#">Sobre o Curso</a>
+            <a href="https://www.unifev.edu.br/curso/10/engenharia-de-computacao">Conheça o Curso</a>
         </div>
-    </header>
-    <!--Projetos-->
-    <div>
-        <h1>Projetos</h1>
-    </div>
+    </section>
+
+    <!--MAIN-->
+    <main>
+        <!--Sobre o curso-->
+        <div class="about">
+            <section id="sobre">
+                <div>
+                    <h1>Sobre o Curso</h1>
+                </div>
+            </section>
+            <section class="videosobre">
+                <article>
+                <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/KX3MQuDdzfo?si=lWOA_ge_-235xEoN" 
+                title="YouTube video player" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+            </iframe>
+                </article>
+
+                <aside class="destaque">
+                    <p>
+                        O curso de Engenharia de Computação da Unifev forma profissionais capazes de projetar e desenvolver computadores, periféricos e sistemas que integram hardwares e softwares. Na graduação, os alunos também são capacitados a produzir máquinas e equipamentos específicos, a fim de atender às necessidades do mercado.
+                    </p>
+                    <a href="https://www.unifev.edu.br/curso/10/engenharia-de-computacao">Saiba Mais</a>
+                </aside>
+            </section>
+        </div>
+            
+        <!--PROJETOS-->
+        <section id="projetos">
+            <div>
+                <h1>Projetos</h1>
+            </div>
+            <!--ENIAC-->
+            <section class="eniac">
+                <aside>
+                    <p>#eniaccast</p>
+                    <h2>Eniac Cast</h2>
+                    <p>
+                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                    </p>
+                    <ul>
+                        <li>-Destaque</li>
+                        <li>-Destaque</li>
+                        <li>-Destaque</li>
+                        <li>-Destaque</li>
+                    </ul>
+                </aside>
+
+                <article>
+                    <img src="./components/image/logo minimalista.png" alt="Eniac">
+                </article>
+            </section>
+
+            <!--reengenharia-->
+            <section class="reengenharia">
+                <article>
+                    <img src="./components/image/image.png" alt="reengenharia">
+                </article>
+                <aside>
+                    <p>#reengenharia</p>
+                    <h2>Reengenharia</h2>
+                    <p>
+                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                    </p>
+                <ul>
+                    <li>-Destaque</li>
+                    <li>-Destaque</li>
+                    <li>-Destaque</li>
+                    <li>-Destaque</li>
+                </ul>
+                </aside>
+            </section>
+
+            <!--unic-->
+            <section class="unic">
+                <aside>
+                    <p>#unic</p>
+                    <h2>Unic</h2>
+                    <p>
+                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                    </p>
+                    <ul>
+                        <li>-Destaque</li>
+                        <li>-Destaque</li>
+                        <li>-Destaque</li>
+                        <li>-Destaque</li>
+                    </ul>
+                </aside>
+
+                <article>
+                    <img src="./components/image/unicSEMFUNDDO.png" alt="unic">
+                </article>
+            </section>
+        </section>
+
+        <!--PROFESSORES-->
+        <section class="professores">
+        <h2>Professores</h2>
+
+        <div class="carousel">
+        <button class="prev">&#10094;</button>
+
+        <div class="track-container">
+            <div class="track">
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 1">
+                    <h3>Fernando Bermejo Menechelli</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 2">
+                    <h3>Camilo Augusto Giamatei Esteluti</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Claudomiro Viniciús Moreno Paschoa</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Edson Roberto Bogas Garcia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Eduardo De Souza</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Eric De Oliveira Freitas</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Fernando Datorre</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Fernando Kendy Aoki Rizzatto</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>João Victor Marques Zoccal</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Marcos Paulo Segantini Dos Santos</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Milena Aparecida Batelo Ramos</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Patricia Salles Maturana De Souza</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Renato Ferrari Da Costa</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Rodrigo Salles Maturana</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <h3>Tainá Fernanda Garbelim Pascoalato</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="next">&#10095;</button>
+        </div>
+        </section>
+    <main>
     
-    <main>
-        <aside>
-            <p>#eniaccast</p>
-            <h2>Eniac Cast</h2>
-            <p>
-                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            </p>
-            <ul>
-                <li>Destaque</li>
-                <li>Destaque</li>
-                <li>Destaque</li>
-                <li>Destaque</li>
-            </ul>
-        </aside>
+    <!--Final-->
+    <section class="final">
+        <h1>Transforme código em impacto real</h1>
+        <h2>Nosso curso forma engenheiros para o futuro</h2>
+        <a href="https://www.unifev.edu.br/curso/10/engenharia-de-computacao">Junte-se a nós</a>
+    </section>
 
-        <article>
-            <img src="./components/image/Nada.png" alt="Eniac">
-        </article>
-    </main>
-
-    <main>
-        <article>
-            <img src="./components/image/Nada.png" alt="reengenharia">
-        </article>
-
-        <aside>
-            <p>#reengenharia</p>
-            <h2>Reengenharia</h2>
-            <p>
-                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            </p>
-            <ul>
-                <li>Destaque</li>
-                <li>Destaque</li>
-                <li>Destaque</li>
-                <li>Destaque</li>
-            </ul>
-        </aside>
-    </main>
-    
-    <main>
-        <aside>
-            <p>#unic</p>
-            <h2>UNIC</h2>
-            <p>
-                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            </p>
-            <ul>
-                <li>Destaque</li>
-                <li>Destaque</li>
-                <li>Destaque</li>
-                <li>Destaque</li>
-            </ul>
-        </aside>
-
-        <article>
-            <img src="./components/image/Nada.png" alt="unic">
-        </article>
-    </main>
-
+    <section class="barra">
+        <img class="logo" src="./components/image/logocomp2.png" alt="logocurso">
+        <ul class="redes">
+            <a href="https://www.instagram.com/engenhariadecomputacao.unifev/" class="insta"><img src="./components/image/insta.png" alt="insta"></a>
+            <a href="https://www.youtube.com/@UnifevVotu" class="youtube"><img src="./components/image/youtube.png" alt="youtube"></a>
+        </ul>
+        <p>Desenvolvido por .zip</p>
+        <p>© 2025</p>
+    </section>
 </body>
 
 </html>
