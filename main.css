@@ -25,10 +25,15 @@ body{
 }
 
 header{
+    position: sticky;
+    top: 0;
+    background-color: #133449;
+    border-bottom: 2px solid #ff6b35;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
+    z-index: 1000;
 }
 
 img{
@@ -43,17 +48,33 @@ ul{
     margin: 0;
     padding: 0;
 }
+.botao a{
+    display: block;
+    padding:10px 20px;
+    background: #1B4965;
+    text-decoration:none;
+    color:#333;
+    border:1px solid #bbb;
+    border-bottom:none;
+    border-radius:8px 8px 0 0;
+    font-weight:500;
+}
+.botao a:hover{
+    padding:10px 30px;
+    background: #246085;
+    color: white;
 
-
+}
 li{
     display: flex;
     flex-direction: row;
     margin: 20px;
     color: white;
     align-items: center;
+    font-weight: 500;
 }
 
-.hero{
+.home{
     color: #ff6b35;
 }
 
