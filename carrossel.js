@@ -24,3 +24,21 @@ prevButton.addEventListener('click', () => {
         updateCarousel();
     }
 });
+
+//esconder navbar
+let lastScroll = 0;
+const navbar = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+  let currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll) {
+    navbar.classList.add("hide");
+  } else {
+    navbar.classList.remove("hide");
+  }
+
+  lastScroll = currentScroll;
+
+});
