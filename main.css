@@ -15,20 +15,23 @@ body{
     background-color: #1B4965; /* Cor de fundo principal (azul escuro) */
     color: white;
     
-    max-width: 1200px;          /* Limita a largura máxima do conteúdo */
+    /*max-width: 1200px;          /* Limita a largura máxima do conteúdo */
     margin: 0 auto;            /* Centraliza o conteúdo horizontalmente */
-    padding: 10px;
+    /* padding: 10px; */
 
     font-family: "Poppins", sans-serif; /* Fonte principal do projeto */
     font-weight: normal;
     font-style: normal;
+
+    background-image: url("./components/image/background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 header{
     position: sticky;
     top: 0;
-    background-color: #133449;
-    border-bottom: 2px solid #ff6b35;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,6 +47,7 @@ header.hide{
 img{
     width: 80px;
     border-radius: 5%;
+    margin-left: 30px;
 }
 
 ul{
@@ -56,20 +60,18 @@ ul{
 .botao a{
     display: block;
     padding:10px 20px;
-    background: #1B4965;
     text-decoration:none;
-    color:#333;
-    border:1px solid #bbb;
+    color:#ffffff;
+
     border-bottom:none;
     border-radius:8px 8px 0 0;
-    font-weight:500;
+    font-weight:700;
 }
-.botao a:hover{
-    padding:10px 30px;
-    background: #246085;
-    color: white;
 
+.botao a:hover, a.active{
+    color: #ff6b35;
 }
+
 li{
     display: flex;
     flex-direction: row;
@@ -79,18 +81,13 @@ li{
     font-weight: 500;
 }
 
-.home{
-    color: #ff6b35;
-}
-
-
 /* ==========================================================================
    SEÇÃO DESTAQUE (Hero Section)
    ========================================================================== */
 
 /* Centraliza o conteúdo da seção destaque */
 .destaque{
-    margin-top: 60px;
+    margin: 150px 0;
     text-align: center;
 }
 
@@ -156,7 +153,7 @@ main{
 .about{
     background-color: white;
     border-radius: 20px;
-    padding: 60px 30px;
+    padding: 40px;
     max-width: 1000px;
     margin: 40px auto;
     color: black;
@@ -165,6 +162,13 @@ main{
     flex-direction: column;
     justify-content: center;
 }
+
+.sobre-texto{
+    text-align: left;
+    color: black;
+    font-weight: 400;
+}
+
 #sobre{
     color: #ff6b35;
     font-size: 2rem;
@@ -206,6 +210,7 @@ main{
     font-weight: 600;
     display: inline-block;
     transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 /*PROJETOS*/
@@ -408,7 +413,10 @@ main{
     margin: 15px;
 }
 .professores {
-    background: #1B4965;
+    background-image: url("./components/image/background_prof.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #ff6b35;
     padding: 50px 0;
     text-align: center;
@@ -427,6 +435,7 @@ main{
 .track-container {
     overflow: hidden;
     width: 80%;
+    max-width: 1200px;
 }
 
 .track {
@@ -504,7 +513,8 @@ main{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 15px;
+    /* padding: 10px; */
+    width: 100%;
 }
 
 .barra img{
