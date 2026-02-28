@@ -717,12 +717,11 @@ main{
         align-items: center;
     }
 
-    .track-container{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-    }
+    .track {
+  display: flex;
+  gap: 16px; /* o JS lê isso e soma no passo */
+  will-change: transform;
+}
 
     .card{
         min-width: 75vw;   /* ocupa 85% da largura da tela */
