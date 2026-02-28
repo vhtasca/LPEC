@@ -2,6 +2,10 @@
    CONFIGURAÇÕES GERAIS
    ========================================================================== */
 
+*{
+    box-sizing: border-box;
+}
+
 /* Comportamento de scroll suave ao clicar nos links de navegação */
 html{
     scroll-behavior: smooth;
@@ -24,7 +28,7 @@ body{
     font-style: normal;
 
     background-image: url("./components/image/background.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -198,8 +202,10 @@ main{
     text-align: center;
 }
 .videosobre article iframe {
-    width: 474px;
-    height: 360px;
+    width: 100%;
+    max-width: 474px;
+    aspect-ratio: 16/9;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
@@ -440,10 +446,6 @@ main{
 }
 
 .professores {
-    background-image: url("./components/image/background2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     color: #ff6b35;
     padding: 50px 0;
     text-align: center;
@@ -472,7 +474,8 @@ main{
 }
 
 .card {
-    min-width: 300px;
+    min-width: 280px;
+    max-width: 90vw;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -485,8 +488,8 @@ main{
 }
 
 .quadrado{
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
     border-radius: 10px;
     overflow: hidden; /* esconde o excesso */
 }
@@ -550,6 +553,7 @@ main{
 }
 .final h2{
     font-weight: 400;
+    text-align: center;
 }
 
 .final a{
@@ -614,8 +618,12 @@ main{
     text-align: center;
 }
 
-/*papo de ramborg ainda, responsivo agr*/
+/*responsivo agr*/
 @media (max-width: 768px){
+
+    header{
+        position: relative; /* remove sticky */
+    }
 
     .botao{
         display: none;
@@ -638,5 +646,86 @@ main{
 
     .menu-toggle{
         display: block;
+    }
+    
+    .destaque{
+        margin: 100px 20px 60px 20px;
+    }
+
+    .destaque h1{
+        font-size: 1.8rem;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .destaque p{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .destaque a{
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .eniac,
+    .reengenharia,
+    .unic{
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .eniac aside,
+    .reengenharia aside,
+    .unic aside{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .eniac img,
+    .reengenharia img,
+    .unic img{
+        width: 180px;
+        margin: 20px auto;
+    }
+
+    .carousel{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .track-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .card{
+        min-width: 75vw;   /* ocupa 85% da largura da tela */
+        max-width: 85vw;
+    }
+
+    .quadrado{
+        height: 220px;     /* diminui a imagem */
+    }
+
+    .card h3{
+        font-size: 1rem;
+    }
+
+    .card p{
+        font-size: 0.9rem;
+    }
+
+    .track{
+        gap: 0;
+    }
+
+    #professores h2{
+        font-size: 2rem;
     }
 }
