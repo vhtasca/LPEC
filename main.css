@@ -72,7 +72,7 @@ ul{
     color: #ff6b35;
 }
 
-li{
+header li{
     display: flex;
     flex-direction: row;
     margin: 20px;
@@ -98,7 +98,7 @@ li{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1rem;
+    font-size: 60px;
 }
 
 /* Tamanho grande para impacto visual */
@@ -169,11 +169,12 @@ main{
     font-weight: 400;
 }
 
-#sobre{
+#sobre h1{
     color: #ff6b35;
-    font-size: 2rem;
+    font-size: 60px;
     font-weight: 700;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 .videosobre{
     display: flex;
@@ -222,6 +223,12 @@ main{
     margin-right: auto;
 }
 
+#projetos div h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
 .projects{
     display: flex;
     flex-direction: column;
@@ -237,7 +244,7 @@ main{
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    margin: 15px;
+    margin: 50px 0;
     max-width: 1200px;
     gap: 15px;
 }
@@ -294,7 +301,7 @@ main{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin: 15px;
+    margin: 50px 0;
     gap: 15px;
 }
 
@@ -306,7 +313,7 @@ main{
 }
 
 .reengenharia aside p:first-child{
-    color: #4eb597;
+    color: #ff6b35;
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 1.5;
@@ -327,8 +334,8 @@ main{
 }
 
 .reengenharia article{
-    margin-right: 10px;
-    margin-left: 18px;
+    margin-right: 18px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
 }
@@ -336,6 +343,8 @@ main{
 .reengenharia img{
     width: 250px;
     display: block;
+    margin-left: 0;
+    margin-right: 30px;
 }
 
 .reengenharia li{
@@ -355,7 +364,7 @@ main{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin: 15px;
+    margin: 50px 0;
     max-width: 1200px;
     gap: 15px;
 }
@@ -412,6 +421,14 @@ main{
     margin-right: auto;
     margin: 15px;
 }
+
+#professores h2{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
 .professores {
     background-image: url("./components/image/background_prof.png");
     background-size: contain;
@@ -445,21 +462,31 @@ main{
 }
 
 .card {
-    min-width: 250px;
+    min-width: 300px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    justify-content: center;
 }
 
 .card p {
     color: black;
 }
 
-.card img {
-    width: 100%;
+.quadrado{
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    overflow: hidden; /* esconde o excesso */
+}
+
+.quadrado img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center; /* centraliza a imagem */
+  margin: 0;
 }
 
 .prev, .next {
@@ -476,6 +503,26 @@ main{
     transform: scale(1.2);
 }
 
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #d3d3d3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #ff6b35;
+}
+
 /*FINAL*/
 .final{
     display: flex;
@@ -486,10 +533,13 @@ main{
 }
 
 .final h1{
-    font-weight: 300;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 5px;
 }
 .final h2{
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .final a{
@@ -503,36 +553,53 @@ main{
     text-align: center;
     width: auto;
     max-width: 200px;
-    margin: 20px;
+    margin: 20px 0 50px 0;
 }
 
-.barra{
-    background-color: white;
+.barra {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    /* padding: 10px; */
+    justify-content: center;
+    background-color: white;
+    padding: 20px 0;
     width: 100%;
 }
 
-.barra img{
+.barra img.logo {
     width: 100px;
+    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-.redes img{
-    width: 20px;
-}
-
-ul{
-    display: flex;
+.redes {
+    display: flex;           /* coloca os ícones lado a lado */
     flex-direction: row;
+    gap: 5px;               /* espaço entre os ícones */
+    padding: 0;
+    margin: 0 0 10px 0;
+    justify-content: center;
+    align-items: center;
 }
 
-.barra p{
+.redes li {
+    list-style: none;
+}
+
+.redes a {
+    display: inline-block;
+}
+
+.redes img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0;
+}
+
+.barra p {
     color: black;
-    margin: 0 auto 10px;
+    margin: 5px 0;
     font-weight: 400;
+    text-align: center;
 }
-
