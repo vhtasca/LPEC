@@ -690,6 +690,26 @@ main{
         margin: 20px auto;
     }
 
+    .reengenharia {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .reengenharia aside {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .reengenharia article {
+        margin: 20px auto;
+    }
+
+    .reengenharia img {
+        width: 180px;
+        margin: 0 auto;
+    }
+
     .carousel{
         width: 100%;
         display: flex;
