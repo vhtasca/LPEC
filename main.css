@@ -68,7 +68,7 @@ ul{
     font-weight:700;
 }
 
-.botao a:hover, a.active{
+.botao a:hover, .botao a.active{
     color: #ff6b35;
 }
 
@@ -79,6 +79,16 @@ header li{
     color: white;
     align-items: center;
     font-weight: 500;
+}
+
+/*botao ramborg*/
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    color: white;
+    margin-right: 30px;
+    cursor: pointer;
 }
 
 /* ==========================================================================
@@ -602,4 +612,31 @@ main{
     margin: 5px 0;
     font-weight: 400;
     text-align: center;
+}
+
+/*papo de ramborg ainda, responsivo agr*/
+@media (max-width: 768px){
+
+    .botao{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #111;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .botao.active{
+        display: flex;
+    }
+
+    header li{
+        margin: 10px 0;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
 }

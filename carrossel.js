@@ -137,3 +137,11 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// ===== MENU RESPONSIVO =====
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector("header ul");
+
+function toggleMenu() {
+  navLinks.classList.toggle("active");
+}
