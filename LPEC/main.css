@@ -1,0 +1,755 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+
+*{
+    box-sizing: border-box;
+}
+
+/* Comportamento de scroll suave ao clicar nos links de navegação */
+html{
+    scroll-behavior: smooth;
+}
+
+/* 
+ * Estilos globais do corpo da página
+ * Define cor de fundo, cor do texto, largura máxima e fonte principal
+ */
+body{
+    background-color: #1B4965; /* Cor de fundo principal (azul escuro) */
+    color: white;
+    
+    /*max-width: 1200px;          /* Limita a largura máxima do conteúdo */
+    margin: 0 auto;            /* Centraliza o conteúdo horizontalmente */
+    /* padding: 10px; */
+
+    font-family: "Poppins", sans-serif; /* Fonte principal do projeto */
+    font-weight: normal;
+    font-style: normal;
+
+    background-image: url("./components/image/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+header.hide{
+  transform: translateY(-100%);
+}
+
+img{
+    width: 80px;
+    border-radius: 5%;
+    margin-left: 30px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.botao a{
+    display: block;
+    padding:10px 20px;
+    text-decoration:none;
+    color:#ffffff;
+
+    border-bottom:none;
+    border-radius:8px 8px 0 0;
+    font-weight:700;
+}
+
+.botao a:hover, .botao a.active{
+    color: #ff6b35;
+}
+
+header li{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    color: white;
+    align-items: center;
+    font-weight: 500;
+}
+
+/*botao ramborg*/
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    color: white;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SEÇÃO DESTAQUE (Hero Section)
+   ========================================================================== */
+
+/* Centraliza o conteúdo da seção destaque */
+.destaque{
+    margin: 150px 0;
+    text-align: center;
+}
+
+/* Título principal da seção destaque */
+.destaque h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
+
+/* Tamanho grande para impacto visual */
+.destaque h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Subtítulo/mensagem da seção destaque */
+.destaque p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão de chamada para ação (CTA) */
+.destaque a{
+    color: white;
+    background-color: #ff6b35;  /* Cor de destaque (laranja) */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    width: auto;
+    max-width: 200px;
+    margin: 20px;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (MAIN)
+   ========================================================================== */
+
+/* Layout vertical para o main */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ==========================================================================
+   SEÇÃO "SOBRE O CURSO"
+   ========================================================================== */
+
+/* 
+ * Container principal da seção Sobre
+ * Fundo branco com bordas arredondadas, centralizado na página
+ */
+.about{
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre-texto{
+    text-align: left;
+    color: black;
+    font-weight: 400;
+}
+
+#sobre h1{
+    color: #ff6b35;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.videosobre{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.videosobre article {
+    text-align: center;
+}
+.videosobre article iframe {
+    width: 100%;
+    max-width: 474px;
+    aspect-ratio: 16/9;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.videosobre aside {
+    flex: 1;
+    min-width: 300px;
+}
+.videosobre aside p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.videosobre aside a {
+    background-color: #ff6b35;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+/*PROJETOS*/
+#projetos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#projetos div h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*ENIAC*/
+.eniac {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 50px 0;
+    max-width: 1200px;
+    gap: 15px;
+}
+.eniac aside{
+    margin-left: 10px;
+    margin-right: 18px;
+    flex: 1; /* Permite que o aside ocupe o espaço restante */
+    max-width: 500px;
+}
+.eniac aside p:first-child{
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.eniac aside h2{
+    font-size: 2rem;
+    margin: 10px 0;
+    margin-top: 10px;
+}
+.eniac aside p:last-child{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.eniac article{
+    margin-right: 10px;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.eniac img{
+    width: 250px;
+    display: block; /* Garante que a imagem seja tratada como um bloco para evitar problemas de alinhamento */
+}
+
+.eniacli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*REENGENHARIA*/
+.reengenharia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px 0;
+    gap: 15px;
+}
+
+.reengenharia aside{
+    margin-left: 10px;
+    margin-right: 18px;
+    flex: 1;
+    max-width: 500px;
+}
+
+.reengenharia aside p:first-child{
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.reengenharia aside h2{
+    font-size: 2rem;
+    margin: 10px 0;
+    margin-top: 10px;
+}
+
+.reengenharia aside p:last-child{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.reengenharia article{
+    margin-right: 18px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.reengenharia img{
+    width: 250px;
+    display: block;
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.reengenharia li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 30px;
+    text-align: center;
+}
+
+/*UNIC*/
+.unic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px 0;
+    max-width: 1200px;
+    gap: 15px;
+}
+.unic aside{
+    margin-left: 10px;
+    margin-right: 18px;
+    flex: 1;
+    max-width: 500px;
+}
+.unic aside p:first-child{
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.unic aside h2{
+    font-size: 2rem;
+    margin: 10px 0;
+    margin-top: 10px;
+}
+.unic aside p:last-child{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.unic article{
+    margin-right: 10px;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+}
+.unic img{
+    width: 250px;
+    display: block;
+}
+
+.unic ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+.unic li{
+    margin: 10px;
+}
+
+/*PROFESSORES*/
+#professores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 15px;
+}
+
+#professores h2{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.professores {
+    color: #ff6b35;
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-container {
+    overflow: hidden;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.card {
+    min-width: 280px;
+    max-width: 90vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card p {
+    color: black;
+}
+
+.quadrado{
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1 / 1; /*mantem quadrado automaticamente*/
+    border-radius: 10px;
+    overflow: hidden; /* esconde o excesso */
+    margin: 0 auto;
+}
+
+.quadrado img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center; /* centraliza a imagem */
+  margin: 0;
+}
+
+.prev, .next {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.prev:hover, .next:hover {
+    transform: scale(1.2);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #d3d3d3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #ff6b35;
+}
+
+/*FINAL*/
+.final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.final h1{
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.final h2{
+    font-weight: 400;
+    text-align: center;
+}
+
+.final a{
+    color: white;
+    background-color: #ff6b35;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    width: auto;
+    max-width: 200px;
+    margin: 20px 0 50px 0;
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.barra img.logo {
+    width: 100px;
+    margin-bottom: 10px;
+    margin: 10px 0;
+}
+
+.redes {
+    display: flex;           /* coloca os ícones lado a lado */
+    flex-direction: row;
+    gap: 5px;               /* espaço entre os ícones */
+    padding: 0;
+    margin: 0 0 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes li {
+    list-style: none;
+}
+
+.redes a {
+    display: inline-block;
+}
+
+.redes img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0;
+}
+
+.barra p {
+    color: black;
+    margin: 5px 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*responsivo agr*/
+@media (max-width: 768px){
+
+    header{
+        position: relative; /* remove sticky */
+    }
+
+    .botao{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #111;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .botao.active{
+        display: flex;
+    }
+
+    header li{
+        margin: 10px 0;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+    
+    .destaque{
+        margin: 100px 20px 60px 20px;
+    }
+
+    .destaque h1{
+        font-size: 1.8rem;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .destaque p{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .destaque a{
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .eniac,
+    .reengenharia,
+    .unic{
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .eniac aside,
+    .reengenharia aside,
+    .unic aside{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .eniac img,
+    .reengenharia img,
+    .unic img{
+        width: 180px;
+        margin: 20px auto;
+    }
+
+    .reengenharia {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .reengenharia aside {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .reengenharia article {
+        margin: 20px auto;
+    }
+
+    .reengenharia img {
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .carousel{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .track {
+  display: flex;
+  gap: 16px; /* o JS lê isso e soma no passo */
+  will-change: transform;
+}
+
+    .card{
+        min-width: 75vw;   /* ocupa 85% da largura da tela */
+        max-width: 85vw;
+    }
+
+    .quadrado{
+        height: 220px;     /* diminui a imagem */
+    }
+
+    .card h3{
+        font-size: 1rem;
+    }
+
+    .card p{
+        font-size: 0.9rem;
+    }
+
+    .track{
+        gap: 0;
+    }
+
+    #professores h2{
+        font-size: 2rem;
+    }
+}
