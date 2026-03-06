@@ -192,3 +192,22 @@ const navLinks = document.querySelector("header ul");
 function toggleMenu() {
   navLinks.classList.toggle("active");
 }
+
+//==== SWIPE NO CLL ====
+let startX = 0
+
+track.addEventListener("touchstart", (e)=>{
+  startX = e.touches[0].clientX
+})
+
+track.addEventListener("touchend", (e)=>{
+  let endX = e.changedTouches[0].clientX
+
+  if(startX - endX > 50){
+    nextButton.click()
+  }
+
+  if(endX - startX > 50){
+    prevButton.click()
+  }
+})
