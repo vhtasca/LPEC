@@ -745,11 +745,16 @@ main{
         font-size: 0.9rem;
     }
 
-    .track{
-        gap: 0;
-    }
-
     #professores h2{
         font-size: 2rem;
     }
 }
+@media (max-width: 480px){
+        .card{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .quadrado{
+            max-width: 200px;
+        }
+    }
