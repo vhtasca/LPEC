@@ -34,8 +34,10 @@ body{
 }
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -72,8 +74,12 @@ ul{
     font-weight:700;
 }
 
-.botao a:hover, .botao a.active{
-    color: #ff6b35;
+#sobre{
+    scroll-margin-top: 120px;
+}
+
+.botao a.active{
+  color:#ff6b35;
 }
 
 header li{
@@ -88,6 +94,7 @@ header li{
 /*botao ramborg*/
 
 .menu-toggle{
+    position: relative;
     display: none;
     font-size: 28px;
     color: white;
@@ -459,12 +466,13 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .track-container {
-    overflow: hidden;
     width: 80%;
     max-width: 1200px;
+    overflow: hidden;
 }
 
 .track {
@@ -627,8 +635,21 @@ main{
 @media (max-width: 768px){
 
     header{
-        position: relative; /* remove sticky */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
+
+    header ul{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background: #111;
+    width: 200px;
+    display: none;
+  }
 
     .botao{
         display: none;
@@ -729,8 +750,8 @@ main{
 }
 
     .card{
-        min-width: 75vw;   /* ocupa 85% da largura da tela */
-        max-width: 85vw;
+        width: 90vw;
+        max-width: 350px;
     }
 
     .quadrado{
@@ -758,3 +779,9 @@ main{
             max-width: 200px;
         }
     }
+
+@media (hover: hover) {
+  .botao a:hover {
+    color: #ff6b35;
+  }
+}
