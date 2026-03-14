@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./components/image/logoCOMP.png" type="image/png">
     <script src="carrossel.js" defer></script>
-    <title>UNIFEV</title>
+    <title>Eng. de Computação | UNIFEV</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <!--<div class="background">
-        <img src="./components/image/background.png" alt="background">
-    </div>-->
     <header>
-       <article>
+        <article>
             <img src="./components/image/logoCOMP.png" alt="logocurso">
         </article>
 
         <aside>
-            <ul>
-                <a href="#sobre"><li class="hero">Sobre o curso</li></a>
-                <a href="#projetos"><li>Projetos</li></a>
-                <a href="#professores"><li>Professores</li></a>
+            <ul class="botao">
+                <li><a href="#" class="active">Início</a></li>
+                <li><a href="#sobre">Sobre o curso</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#professores">Professores</a></li>
             </ul>
         </aside>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     
     </header>
     
@@ -57,10 +59,9 @@
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
                 allowfullscreen></iframe>
-            </iframe>
                 </article>
 
-                <aside class="destaque">
+                <aside class="sobre-texto">
                     <p>
                         O curso de Engenharia de Computação da Unifev forma profissionais capazes de projetar e desenvolver computadores, periféricos e sistemas que integram hardwares e softwares. Na graduação, os alunos também são capacitados a produzir máquinas e equipamentos específicos, a fim de atender às necessidades do mercado.
                     </p>
@@ -70,7 +71,7 @@
         </div>
             
         <!--PROJETOS-->
-        <section id="projetos">
+        <section class="projects" id="projetos">
             <div>
                 <h1>Projetos</h1>
             </div>
@@ -80,22 +81,22 @@
                     <p>#eniaccast</p>
                     <h2>Eniac Cast</h2>
                     <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                        Onde a Engenharia de Computação ganha voz. Mergulhe nas tendências que estão moldando o futuro!
+                        No Eniac Cast, exploramos desde os bastidores da programação até os avanços da Inteligência Artificial
+                        através de conversas com quem vive a tecnologia na prática: especialistas, estudantes e profissionais da área.
                     </p>
-                    <ul>
-                        <li>-Destaque</li>
-                        <li>-Destaque</li>
-                        <li>-Destaque</li>
-                        <li>-Destaque</li>
-                    </ul>
                 </aside>
-
                 <article>
                     <img src="./components/image/logo minimalista.png" alt="Eniac">
                 </article>
             </section>
+            <!--
+            <ul class="eniacli">
+                <li><i>Ouça, aprenda e conecte-se com a nova geração de engenheiros.</i></li>
+            </ul>
+            -->
 
-            <!--reengenharia-->
+            <!--Reengenharia-->
             <section class="reengenharia">
                 <article>
                     <img src="./components/image/image.png" alt="reengenharia">
@@ -104,14 +105,9 @@
                     <p>#reengenharia</p>
                     <h2>Reengenharia</h2>
                     <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                        Transformando lixo eletrônico em oportunidade. Recuperamos computadores descartados pela população e os revitalizamos,
+                        levando tecnologia acessível para quem precisa através de doações à comunidade. 
                     </p>
-                <ul>
-                    <li>-Destaque</li>
-                    <li>-Destaque</li>
-                    <li>-Destaque</li>
-                    <li>-Destaque</li>
-                </ul>
                 </aside>
             </section>
 
@@ -119,18 +115,19 @@
             <section class="unic">
                 <aside>
                     <p>#unic</p>
-                    <h2>Unic</h2>
+                    <h2>UNIC</h2>
                     <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                        Sua pesquisa tem o poder de transformar. O UNIC - Congresso Regional de Práticas Investigativas da Unifev é o espaço onde
+                        grandes ideias ganham voz. Criado para estudantes, professores e egressos, o evento conecta conhecimento e prática,
+                        promovendo debates que tiram a ciência do papel e impulsionam o desenvolvimento social, cultural e educacional da nossa
+                        região. 
                     </p>
+                    <!--
                     <ul>
-                        <li>-Destaque</li>
-                        <li>-Destaque</li>
-                        <li>-Destaque</li>
-                        <li>-Destaque</li>
+                        <li>Venha compartilhar suas descobertas e expandir sua visão de mundo!</li>
                     </ul>
+                    -->
                 </aside>
-
                 <article>
                     <img src="./components/image/unicSEMFUNDDO.png" alt="unic">
                 </article>
@@ -138,98 +135,99 @@
         </section>
 
         <!--PROFESSORES-->
-        <section class="professores">
+        <section id="professores" class="professores">
         <h2>Professores</h2>
 
-        <div class="carousel">
-        <button class="prev">&#10094;</button>
+        <div class="carousel" role="region" aria-label="carrossel de professores" aria-live="polite">
+        <button class="prev" aria-label="Professor Anterior">&#10094;</button>
 
         <div class="track-container">
             <div class="track">
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 1">
+                    <div class="quadrado"><img src="components/image/profs/menechelli.jpg" alt="Foto do professor Fernando Bermejo Menechelli" loading="lazy"></div>
                     <h3>Fernando Bermejo Menechelli</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Possui graduação em Arquitetura e Urbanismo pelo Centro Universitário de Votuporanga-UNIFEV (2008), Especialização em Ciência da Computação (2000) pelo Centro Universitário de Rio Preto-FIRP e graduação em Ciência da Computação pelo Centro Universitário de Rio Preto-FIRP (1998).</p>
                 </div>
 
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 2">
+                    <div class="quadrado"><img src="components/image/profs/camilo.jpg" alt="Foto do professor Camilo Augusto Giamatei Esteluti" loading="lazy"></div>
                     <h3>Camilo Augusto Giamatei Esteluti</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Mestre em Estudos Linguísticos pela Unesp (2015). Especialista em Formação de Professores de Língua Estrangeira pela Unesp (2015) e em Metodologias para o Ensino de Línguas e Literatura pelo Unifev (2009). Graduado em Licenciatura em Letras - Português/Inglês pela Unifev (2006).</p>
                 </div>
 
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/vini.jpg" alt="Foto do professor Claudomiro Viniciús Moreno Paschoa" loading="lazy"></div>
                     <h3>Claudomiro Viniciús Moreno Paschoa</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Engenheiro Civil, Matemático e Biólogo; Mestre em Engenharia Civil, UNESP - Ilha Solteira; Especialista em Ensino de Ciências - UTFPR.</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/bogas.jpg" alt="Foto do professor Edson Roberto Bogas Garcia" loading="lazy"></div>
                     <h3>Edson Roberto Bogas Garcia</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Pós-doutor e Doutor em Estudos Linguísticos na área de concentração do Tratamento do Léxico da Língua Geral (2012) pela Unesp. Mestre em Letras (Língua e Literatura Italiana) pela USP(1998). Graduado em Letras (Português e Italiano) pela Unesp(1990).</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/eduardo.jpg" alt="Foto do professor Eduardo De Souza" loading="lazy"></div>
                     <h3>Eduardo De Souza</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Possui formação técnica em contabilidade (2002). Graduação em Matemática pela Unesp (2009). Mestrado em Engenharia Elétrica pela Unesp (2013).</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/eric.jpeg" alt="Foto do professor Eric De Oliveira Freitas" loading="lazy"></div>
                     <h3>Eric De Oliveira Freitas</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>MBA em Gestão de Projetos pela Somay (2014). Possui graduação em Engenharia da Computação pelo Unifev (2008). Atua ainda como resposável pela programação e banco de dados do EAD Unifev.</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/datorre.jpg" alt="Foto do professor Fernando Datorre" loading="lazy"></div>
                     <h3>Fernando Datorre</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Bacharel em Sistemas de Informação pela Unifev(2006), Mestre em Bio-Engenharia pela Universidade Brasil (2017).</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/kendy.jpg" alt="Foto do professor Fernando Kendy Aoki Rizzatto" loading="lazy"></div>
                     <h3>Fernando Kendy Aoki Rizzatto</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Doutorado em Engenharia Biomédica na instituição Universidade Brasil(2024). Possui Mestrado em Ciências Ambientais na instituição Universidade Brasil (2016). Pós Graduado lato sensu em Desenvolvimento de Software para WEB na instituição Unifev em parceria com a Ufscar(2010). Graduado em Sistema de Informação pela Unifev (2008).</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/zoccal.jpg" alt="Foto do professor João Victor Marques Zoccal" loading="lazy"></div>
                     <h3>João Victor Marques Zoccal</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Graduado em Química Ambiental pela Unesp(2007) e em Engenharia Ambiental pela Ufscar(2019). Mestre em Engenharia Química pela Ufscar (2010). Doutor em Engenharia Química pela Ufscar (2015).</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/marcos.jpg" alt="Foto do professor Marcos Paulo Segantini Dos Santos" loading="lazy"></div>
                     <h3>Marcos Paulo Segantini Dos Santos</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Possui graduação em Licenciatura em Física pela Unesp(2011), graduação em Engenharia Civil pela Unifev (2016), pós graduação em Docência no Ensino Superior pela UCDB (2016), pós graduação em Engenharia de Segurança do Trabalho pela Unifev (2018) e mestrando em Matemática (ProfMat) pela USP</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/milena.jpg" alt="Foto da professora Milena Aparecida Batelo Ramos" loading="lazy"></div>
                     <h3>Milena Aparecida Batelo Ramos</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Possui graduação em Licenciatura em Matemática pela Unesp (2000) e mestrado em Matemática pela Unesp (2002). Possui o curso de 2 Licenciatura em Pedagogia pela UNOPAR (2019).</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/pat.jpg" alt="Foto da professora Patricia Salles Maturana De Souza" loading="lazy"></div>
                     <h3>Patricia Salles Maturana De Souza</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Possui graduação em Engenharia de Computação - Unifev (2006) e mestrado em Engenharia Elétrica pela Unesp (2010). Possui especialização no curso de empreendedorismo e inovação tecnológica criado pela união de 3 instituições: UNESP, Univesp e CREA (2021)</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/renato.jpg" alt="Foto do professor Renato Ferrari Da Costa" loading="lazy"></div>
                     <h3>Renato Ferrari Da Costa</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Bacharel em Engenharia Elétrica/Eletrônica com Ênfase em Telecomunicações - UNILINS. Possui Pós graduação Lato Sensu em Metodologia do Ensino Profissionalizante - FIJ.</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/rodrigo.jpg" alt="Foto do professor Rodrigo Salles Maturana" loading="lazy"></div>
                     <h3>Rodrigo Salles Maturana</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Possui Graduação em Engenharia Mecânica pela UNESP (2015), com período sanduíche na Hochschule Albstadt-Sigmaringen- Alemanha (Bolsa AREX-UNESP). No ano de 2019, concluiu o Mestrado em Engenharia Mecânica na USP.</p>
                 </div>
                 <div class="card">
-                    <img src="components/image/Nada.png" alt="Professor 3">
+                    <div class="quadrado"><img src="components/image/profs/taina.jpg" alt="Foto da professora Tainá Fernanda Garbelim Pascoalato" loading="lazy"></div>
                     <h3>Tainá Fernanda Garbelim Pascoalato</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Possui graduação em Engenharia Elétrica pela Unifev (2017). Recebeu o título de Mestre e de Doutora em Engenharia Elétrica pela UNESP, com bolsa CNPq (2020) e bolsa FAPESP (2024), respectivamente.</p>
                 </div>
             </div>
         </div>
 
-        <button class="next">&#10095;</button>
+        <button class="next" aria-label="Proximo Professor">&#10095;</button>
         </div>
+        <div class="dots"></div>
         </section>
-    <main>
+    </main>
     
     <!--Final-->
     <section class="final">
@@ -238,15 +236,23 @@
         <a href="https://www.unifev.edu.br/curso/10/engenharia-de-computacao">Junte-se a nós</a>
     </section>
 
-    <section class="barra">
-        <img class="logo" src="./components/image/logocomp2.png" alt="logocurso">
+    <footer class="barra">
+        <img class="logo" src="./components/image/logocomp2.png" alt="Logotipo do curso">
         <ul class="redes">
-            <a href="https://www.instagram.com/engenhariadecomputacao.unifev/" class="insta"><img src="./components/image/insta.png" alt="insta"></a>
-            <a href="https://www.youtube.com/@UnifevVotu" class="youtube"><img src="./components/image/youtube.png" alt="youtube"></a>
+            <li>
+                <a href="https://www.instagram.com/engenhariadecomputacao.unifev/" target="_blank">
+                    <img src="./components/image/insta.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@UnifevVotu" target="_blank">
+                    <img src="./components/image/youtube.png" alt="YouTube">
+                </a>
+            </li>
         </ul>
-        <p>Desenvolvido por .zip</p>
-        <p>© 2025</p>
-    </section>
+        <p>Desenvolvido por <strong>.zip</strong></p>
+        <p>© 2026</p>
+    </footer>
 </body>
 
 </html>
