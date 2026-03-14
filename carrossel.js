@@ -12,14 +12,34 @@ let step = 0;              // largura do card + gap
 let visibleCount = 1;      // quantos cards aparecem na tela
 let isMoving = false;
 
+//====Navigation pelo teclado====
+document.querySelector('.carousel')
+.addEventListener('keydown', (e) => {
+
+  if (e.key === 'ArrowRight') {
+    nextButton.click();
+  }
+
+  if (e.key === 'ArrowLeft') {
+    prevButton.click();
+  }
+
+});
+
 // ===== DOTS =====
 const dotsContainer = document.querySelector('.dots');
 dotsContainer.innerHTML = "";
 
 for (let i = 0; i < slidesCount; i++) {
-  const dot = document.createElement('div');
+  const dot = document.createElement('button');
   dot.classList.add('dot');
-  if (i === 0) dot.classList.add('active');
+  dot.setAttribute('aria-label', `Ir para o professor ${i + 1}`);
+
+  if (i === 0) {
+    dot.classList.add('active');
+    dot.setAttribute('aria-current', 'true');
+  }
+
   dot.addEventListener('click', () => goToSlide(i));
   dotsContainer.appendChild(dot);
 }
@@ -61,8 +81,22 @@ function rebuildCarousel() {
   calcStepAndVisible();
 
   // clona N do começo e N do fim
-  const startClones = realCards.slice(0, visibleCount).map(n => n.cloneNode(true));
-  const endClones = realCards.slice(-visibleCount).map(n => n.cloneNode(true));
+  const startClones = realCards.slice(0, visibleCount).map(n => {
+    const clone = n.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('tabindex', '-1');
+    clone.querySelectorAll('img')
+      .forEach(img => img.setAttribute('loading', 'lazy'));
+    return clone;
+  });
+  const endClones = realCards.slice(-visibleCount).map(n => {
+    const clone = n.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('tabindex', '-1');
+    clone.querySelectorAll('img')
+      .forEach(img => img.setAttribute('loading', 'lazy'));
+    return clone;
+  });
 
   // adiciona clones no começo (do fim real)
   endClones.forEach(clone => track.insertBefore(clone, track.firstChild));
@@ -151,15 +185,15 @@ let lastScroll = 0;
 const navbar = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-    let currentScroll = window.pageYOffset;
+  let currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScroll) {
-        navbar.classList.add("hide");
-    } else {
-        navbar.classList.remove("hide");
-    }
+  if (currentScroll > lastScroll) {
+    navbar.classList.add("hide");
+  } else {
+    navbar.classList.remove("hide");
+  }
 
-    lastScroll = currentScroll;
+  lastScroll = currentScroll;
 });
 
 const sections = document.querySelectorAll("section");
@@ -196,18 +230,18 @@ function toggleMenu() {
 //==== SWIPE NO CLL ====
 let startX = 0
 
-track.addEventListener("touchstart", (e)=>{
+track.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX
 })
 
-track.addEventListener("touchend", (e)=>{
+track.addEventListener("touchend", (e) => {
   let endX = e.changedTouches[0].clientX
 
-  if(startX - endX > 50){
+  if (startX - endX > 50) {
     nextButton.click()
   }
 
-  if(endX - startX > 50){
+  if (endX - startX > 50) {
     prevButton.click()
   }
 })
